@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>
+Tree traversals
+</title>
+</head>
+<body>
+
+<div class="fix">
+<div class="item1" id="root">5
+</div>
+<span style='font-size:100px' id="firstarrow">
+&#8601;
+</span>
+<span style='font-size:100px' id="secondarrow">
+&#8600;
+</span>
+<div class="grid">
+<div class="item2" id="leftnode">
+3
+</div>
+<div class="item3" id="rightnode">
+9
+</div>
+</div>
+</div>
+<button type="button" class="button-1" onclick="inorder()">INORDER
+</button>
+<button type="button" class="button-2" onclick="preorder()">PREORDER
+</button>
+<button type="button" class="button-3" onclick="postorder()">POSTORDER
+</button>
+<style>
+@keyframes animationName
+{
+from{
+background-color:red;}
+to{
+background-color:yellow;}
+}
+
+</style>
+<script>
+function inorder()
+{
+clearanimation();
+document.getElementById("leftnode").style.animation="animationName 2s ";
+document.getElementById("root").style.animation="animationName 2s 2s";
+document.getElementById("rightnode").style.animation="animationName 2s 4s";
+}
+function preorder()
+{
+clearanimation();
+document.getElementById("root").style.animation="animationName 2s ";
+document.getElementById("leftnode").style.animation="animationName 2s 2s";
+document.getElementById("rightnode").style.animation="animationName 2s 4s";
+}
+function postorder()
+{
+clearanimation();
+document.getElementById("leftnode").style.animation="animationName 2s ";
+document.getElementById("rightnode").style.animation="animationName 2s 2s";
+document.getElementById("root").style.animation="animationName 2s 4s";
+}
+
+
+function clearanimation(){
+document.getElementById("root").style.animation="none ";
+document.getElementById("leftnode").style.animation="none";
+document.getElementById("rightnode").style.animation="none";
+
+document.getElementById("root").offsetHeight;
+document.getElementById("leftnode").offsetHeight;
+document.getElementById("rightnode").offsetHeight ;
+
+
+}
+</script>
+</body>
+</html>
